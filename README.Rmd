@@ -25,8 +25,6 @@ This package provides a reproducible structure for working with the
 seven core OULAD tables in efficient Parquet format, along with helper
 functions for loading and filtering them.
 
-------------------------------------------------------------------------
-
 ## Installation
 
 ``` r
@@ -37,8 +35,6 @@ remotes::install_github("data-edu/ouladr")
 # Load the package
 library(ouladr)
 ```
-
-------------------------------------------------------------------------
 
 ## Data Overview
 
@@ -53,8 +49,6 @@ This package mirrors the original OULAD tables:
 | `ouladr::studentRegistration()` | Student module registration records                           |
 | `ouladr::vle()`                 | Virtual Learning Environment (VLE) materials and release info |
 | `ouladr::studentVle()`          | **Large** log of student interactions with VLE materials      |
-
-------------------------------------------------------------------------
 
 ## How to Load the Data
 
