@@ -29,15 +29,15 @@ library(ouladr)
 
 This package mirrors the original OULAD tables:
 
-| Function                        | Description                                                   | Storage        |
-|---------------------------------|---------------------------------------------------------------|----------------|
-| `ouladr::assessments()`         | Assessment structure and key dates                            | Single Parquet |
-| `ouladr::courses()`             | Module and presentation metadata                              | Single Parquet |
-| `ouladr::studentAssessment()`   | Student submissions and assessment results                    | Single Parquet |
-| `ouladr::studentInfo()`         | Demographics, age band, region, etc.                          | Single Parquet |
-| `ouladr::studentRegistration()` | Student module registration records                           | Single Parquet |
-| `ouladr::vle()`                 | Virtual Learning Environment (VLE) materials and release info | Single Parquet |
-| `ouladr::studentVle()`          | **Large** log of student interactions with VLE materials      |                |
+| Function                        | Description                                                   |
+|---------------------------------|---------------------------------------------------------------|
+| `ouladr::assessments()`         | Assessment structure and key dates                            |
+| `ouladr::courses()`             | Module and presentation metadata                              |
+| `ouladr::studentAssessment()`   | Student submissions and assessment results                    |
+| `ouladr::studentInfo()`         | Demographics, age band, region, etc.                          |
+| `ouladr::studentRegistration()` | Student module registration records                           |
+| `ouladr::vle()`                 | Virtual Learning Environment (VLE) materials and release info |
+| `ouladr::studentVle()`          | **Large** log of student interactions with VLE materials      |
 
 ------------------------------------------------------------------------
 
@@ -73,9 +73,7 @@ interactions <- student_vle %>%
     left_join(courses)
 ```
 
-------------------------------------------------------------------------
-
-## Getting the Raw Data (DEVELOPERS)
+## Developers
 
 The raw OULAD CSV files are **not distributed** with this package
 because of their size.  
@@ -95,14 +93,10 @@ This script will convert the CSVs into compressed Parquet files under
 `inst/extdata/` for fast access in R.  
 These files are ignored by version control (see `.Rbuildignore`).
 
-------------------------------------------------------------------------
-
 ## Authors
 
 - **Joshua M. Rosenberg** – University of Tennessee, Knoxville  
 - **Kelly L. Boles** – University of Tennessee, Knoxville
-
-------------------------------------------------------------------------
 
 ## License & Citation
 
