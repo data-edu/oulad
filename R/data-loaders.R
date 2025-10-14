@@ -13,17 +13,17 @@ list_pkg_tables <- function() {
 
 # Small tables (single parquet)
 #' @export
-load_assessments         <- function() arrow::read_parquet(.find_ext("assessments.parquet"))
+assessments         <- function() arrow::read_parquet(.find_ext("assessments.parquet"))
 #' @export
-load_courses             <- function() arrow::read_parquet(.find_ext("courses.parquet"))
+courses             <- function() arrow::read_parquet(.find_ext("courses.parquet"))
 #' @export
-load_studentAssessment   <- function() arrow::read_parquet(.find_ext("studentAssessment.parquet"))
+studentAssessment   <- function() arrow::read_parquet(.find_ext("studentAssessment.parquet"))
 #' @export
-load_studentInfo         <- function() arrow::read_parquet(.find_ext("studentInfo.parquet"))
+studentInfo         <- function() arrow::read_parquet(.find_ext("studentInfo.parquet"))
 #' @export
-load_studentRegistration <- function() arrow::read_parquet(.find_ext("studentRegistration.parquet"))
+studentRegistration <- function() arrow::read_parquet(.find_ext("studentRegistration.parquet"))
 #' @export
-load_vle                 <- function() arrow::read_parquet(.find_ext("vle.parquet"))
+vle                 <- function() arrow::read_parquet(.find_ext("vle.parquet"))
 
 # Big table: open the dataset lazily and let users filter before collecting
 #' Open the partitioned studentVle dataset (lazy)
@@ -43,7 +43,7 @@ open_studentVle <- function() {
 #' @param presentation Optional code presentation (character scalar)
 #' @param date_between Optional numeric(2) for inclusive date window (OULAD uses day offsets)
 #' @export
-load_studentVle <- function(module = NULL, presentation = NULL, date_between = NULL) {
+studentVle <- function(module = NULL, presentation = NULL, date_between = NULL) {
     ds <- open_studentVle()
     if (!is.null(module))      ds <- dplyr::filter(ds, .data$code_module == module)
     if (!is.null(presentation))ds <- dplyr::filter(ds, .data$code_presentation == presentation)
