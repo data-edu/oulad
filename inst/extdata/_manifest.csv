@@ -1,0 +1,8 @@
+table,path
+assessments,assessments.parquet
+courses,courses.parquet
+studentAssessment,studentAssessment.parquet
+studentInfo,studentInfo.parquet
+studentRegistration,studentRegistration.parquet
+vle,vle.parquet
+studentVle_ds,studentVle_ds/
