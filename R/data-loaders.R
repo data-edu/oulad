@@ -13,17 +13,17 @@ list_pkg_tables <- function() {
 
 # Small tables (single parquet)
 #' @export
-assessments         <- function() arrow::read_parquet(.find_ext("assessments.parquet"))
+assessments         <- function() arrow::read_parquet(.find_ext("assessments.parquet")) |> tibble::as_tibble()
 #' @export
-courses             <- function() arrow::read_parquet(.find_ext("courses.parquet"))
+courses             <- function() arrow::read_parquet(.find_ext("courses.parquet")) |> tibble::as_tibble()
 #' @export
-studentAssessment   <- function() arrow::read_parquet(.find_ext("studentAssessment.parquet"))
+studentAssessment   <- function() arrow::read_parquet(.find_ext("studentAssessment.parquet")) |> tibble::as_tibble()
 #' @export
-studentInfo         <- function() arrow::read_parquet(.find_ext("studentInfo.parquet"))
+studentInfo         <- function() arrow::read_parquet(.find_ext("studentInfo.parquet")) |> tibble::as_tibble()
 #' @export
-studentRegistration <- function() arrow::read_parquet(.find_ext("studentRegistration.parquet"))
+studentRegistration <- function() arrow::read_parquet(.find_ext("studentRegistration.parquet")) |> tibble::as_tibble()
 #' @export
-vle                 <- function() arrow::read_parquet(.find_ext("vle.parquet"))
+vle                 <- function() arrow::read_parquet(.find_ext("vle.parquet")) |> tibble::as_tibble()
 
 # Big table: open the dataset lazily and let users filter before collecting
 #' Open the partitioned studentVle dataset (lazy)
@@ -50,5 +50,5 @@ studentVle <- function(module = NULL, presentation = NULL, date_between = NULL) 
     if (!is.null(date_between) && length(date_between) == 2L) {
         ds <- dplyr::filter(ds, .data$date >= date_between[1], .data$date <= date_between[2])
     }
-    dplyr::collect(ds)
+    dplyr::collect(ds) |> tibble::as_tibble()
 }
