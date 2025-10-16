@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ouladr
+# oulad
 
 Data loaders for the **Open University Learning Analytics Dataset
 (OULAD)**, packaged for convenient use in R.
@@ -15,44 +15,44 @@ functions for loading and filtering them.
 ``` r
 # Install from GitHub
 # (requires remotes or devtools)
-remotes::install_github("data-edu/ouladr")
+remotes::install_github("data-edu/oulad")
 
 # Load the package
-library(ouladr)
+library(oulad)
 ```
 
 ## Data Overview
 
 This package mirrors the original OULAD tables:
 
-| Function                        | Description                                                   |
-|---------------------------------|---------------------------------------------------------------|
-| `ouladr::assessments()`         | Assessment structure and key dates                            |
-| `ouladr::courses()`             | Module and presentation metadata                              |
-| `ouladr::studentAssessment()`   | Student submissions and assessment results                    |
-| `ouladr::studentInfo()`         | Demographics, age band, region, etc.                          |
-| `ouladr::studentRegistration()` | Student module registration records                           |
-| `ouladr::vle()`                 | Virtual Learning Environment (VLE) materials and release info |
-| `ouladr::studentVle()`          | **Large** log of student interactions with VLE materials      |
+| Function                       | Description                                                   |
+|--------------------------------|---------------------------------------------------------------|
+| `oulad::assessments()`         | Assessment structure and key dates                            |
+| `oulad::courses()`             | Module and presentation metadata                              |
+| `oulad::studentAssessment()`   | Student submissions and assessment results                    |
+| `oulad::studentInfo()`         | Demographics, age band, region, etc.                          |
+| `oulad::studentRegistration()` | Student module registration records                           |
+| `oulad::vle()`                 | Virtual Learning Environment (VLE) materials and release info |
+| `oulad::studentVle()`          | **Large** log of student interactions with VLE materials      |
 
 ## How to Load the Data
 
 ``` r
-library(ouladr)
+library(oulad)
 
-assessments <- ouladr::assessments()
-courses <- ouladr::courses()
-student_assess <- ouladr::studentAssessment()
-student_info <- ouladr::studentInfo()
-student_reg <- ouladr::studentRegistration()
-vle <- ouladr::vle()
-student_vle <- ouladr::studentVle()
+assessments <- oulad::assessments()
+courses <- oulad::courses()
+student_assess <- oulad::studentAssessment()
+student_info <- oulad::studentInfo()
+student_reg <- oulad::studentRegistration()
+vle <- oulad::vle()
+student_vle <- oulad::studentVle()
 ```
 
 ## How to Join the Data
 
 ``` r
-library(ouladr) 
+library(oulad) 
 library(dplyr)
 
 students <- student_info %>% 
@@ -107,7 +107,7 @@ cite:
 
 and
 
-> Rosenberg, J. M., & Boles, K. L. (2025).  
-> *ouladr: Load and use the Open University Learning Analytics Dataset
+> Rosenberg, J. M., & Boles, K.L. (2025).  
+> *oulad: Load and use the Open University Learning Analytics Dataset
 > (OULAD).*  
-> GitHub repository: <https://github.com/data-edu/ouladr>
+> GitHub repository: <https://github.com/data-edu/oulad>

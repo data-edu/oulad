@@ -1,4 +1,4 @@
-Package: ouladr
+Package: oulad
 Type: Package
 Title: Load and use the Open University Learning Analytics Dataset (OULAD)
 Version: 0.1.0
