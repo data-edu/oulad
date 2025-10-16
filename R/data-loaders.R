@@ -33,7 +33,6 @@ vle                 <- function() arrow::read_parquet(.find_ext("vle.parquet")) 
 #' # open_studentVle() |>
 #' #   dplyr::filter(code_module == "AAA", code_presentation == "2013B") |>
 #' #   dplyr::collect()
-#' @export
 open_studentVle <- function() {
     arrow::open_dataset(.find_ext("studentVle_ds"))
 }

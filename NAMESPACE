@@ -3,7 +3,6 @@
 export(assessments)
 export(courses)
 export(list_pkg_tables)
-export(open_studentVle)
 export(studentAssessment)
 export(studentInfo)
 export(studentRegistration)
