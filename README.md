@@ -110,4 +110,4 @@ and
 > Rosenberg, J. M., & Boles, K.L. (2025).  
 > *ouladr: Load and use the Open University Learning Analytics Dataset
 > (OULAD).*  
-> GitHub repository: <https://github.com/yourusername/ouladr>
+> GitHub repository: <https://github.com/data-edu/ouladr>
